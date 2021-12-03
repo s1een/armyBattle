@@ -5,14 +5,26 @@ public class Battle {
         Warrior attacker = w1;
         Warrior defender = w2;
         while (attacker.isAlive()){
-            Warrior.attack(attacker,defender);
-            var temp = new Warrior();
-            temp = defender;
+            attacker.attack(defender);
+            var temp = defender;
             defender = attacker;
             attacker = temp;
         }
         var res = w1.isAlive();
         System.out.println(res ? "Winner -> Warrior 1": "Winner -> Warrior 2");
         return w1.isAlive();
+    }
+    public static boolean army_fight(Army army1,Army army2){
+        while (true){
+            var attacker = army1.getFirst();
+            if(attacker.isEmpty()){
+                return false;
+            }
+            var defender = army2.getFirst();
+            if(defender.isEmpty()){
+                return true;
+            }
+            fight(attacker.get(),defender.get());
+        }
     }
 }

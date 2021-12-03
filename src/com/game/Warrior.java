@@ -30,7 +30,10 @@ public class Warrior {
         this.health = health;
     }
 
-    public static void attack (Warrior w1,Warrior w2){
-        w2.setHealth(w2.getHealth() - w1.getAttack());
+    public void attack (Warrior warrior){
+        warrior.getDamage(this);
+    }
+    private void getDamage(Warrior warrior){
+        health -= warrior.getAttack();
     }
 }
