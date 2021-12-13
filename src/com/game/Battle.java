@@ -14,7 +14,7 @@ public class Battle {
         System.out.println(res ? "Winner -> Warrior 1": "Winner -> Warrior 2");
         return w1.isAlive();
     }
-    public static boolean army_fight(Army army1,Army army2){
+    public static boolean armyFight(Army army1, Army army2){
         while (true){
             var attacker = army1.getFirst();
             if(attacker.isEmpty()){
@@ -25,6 +25,11 @@ public class Battle {
                 return true;
             }
             fight(attacker.get(),defender.get());
+        }
+    }
+    public static boolean straightFight(Army army1, Army army2){
+        while (true){
+
         }
     }
 }

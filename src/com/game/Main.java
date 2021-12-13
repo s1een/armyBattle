@@ -2,13 +2,13 @@ package com.game;
 
 public class Main {
     public static void main(String[] args) {
-        var w1 = new Warrior();
-        var w2 = new Knight();
-        Battle.fight(w1,w2);
-        var army1 = new Army();
-        army1.addUnits("Warrior",5);
-        var army2 = new Army();
-        army2.addUnits("Knight",2);
-        Battle.army_fight(army1,army2);
+        Army a1 = new Army();
+        Army a2 = new Army();
+        a1.addUnits("Lancer",1);
+        a2.addUnits("Rookie",1);
+        a2.addUnits("Defender",1);
+        a2.addUnits("Healer",1);
+        Battle.armyFight(a1,a2);
+
     }
 }
